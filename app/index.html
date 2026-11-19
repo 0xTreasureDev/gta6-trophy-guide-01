@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend · GTA VI Trophy Guide and Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies, with a platinum roadmap, missable warnings and cited guides.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="skyline" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="brand">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide</p>
+    <h1>Leonida Legend <span>Trophy Guide &amp; Tracker</span></h1>
+    <p class="tagline">All 55 trophies with a cited guide for each one, a seven-stage roadmap to the platinum, and warnings on every missable. Works fully offline; progress never leaves this browser.</p>
+  </div>
+  <section class="progress-card" aria-label="Overall progress">
+    <p class="progress-big"><strong id="earned-count">0</strong> of 55 earned · <strong id="percent">0%</strong></p>
+    <div class="bar" role="progressbar" aria-label="Platinum progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="platinum-bar-wrap"><div class="bar-fill" id="platinum-bar"></div></div>
+    <p class="progress-note" id="platinum-note">Platinum progress</p>
+    <ul class="grade-stats" id="grade-stats"></ul>
+  </section>
+</header>
+
+<nav class="view-tabs" aria-label="Views">
+  <button type="button" id="tab-checklist" class="tab is-active">Checklist</button>
+  <button type="button" id="tab-roadmap" class="tab">Roadmap to Platinum</button>
+  <span class="view-hint">Deep links: #view=roadmap · #kind=missable · #trophy=37</span>
+</nav>
+
+<section class="controls" aria-label="Filters and tracker tools">
+  <div class="chip-row" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+  <div class="control-row">
+    <label>Grade
+      <select id="grade-filter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>State
+      <select id="state-filter">
+        <option value="all">All trophies</option>
+        <option value="earned">Earned only</option>
+        <option value="unearned">Unearned only</option>
+      </select>
+    </label>
+    <label class="search-label">Search
+      <input id="search" type="search" placeholder="Search name or description">
+    </label>
+    <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Spoiler protection</label>
+    <button type="button" id="export-btn">Export progress</button>
+    <label class="import-btn">Import progress <input id="import-file" type="file" accept="application/json,.json"></label>
+    <button type="button" id="reset-btn" class="ghost">Reset</button>
+  </div>
+  <p class="result-line" id="result-line" aria-live="polite"></p>
+</section>
+
+<main>
+  <section id="checklist-view" aria-label="Trophy checklist">
+    <ul class="trophy-list" id="trophy-list"></ul>
+    <p class="empty" id="empty-note" hidden>No trophies match these filters. Loosen a filter or clear the search.</p>
+  </section>
+
+  <section id="roadmap-view" aria-label="Roadmap to the platinum" hidden>
+    <p class="roadmap-intro">Play the stages in order. Story stages come first so missable trophies are handled inside the missions they belong to; collectibles and activities follow in free roam; 100 percent completion and the platinum close the run. Missable warnings are called out in every stage where they apply.</p>
+    <div id="roadmap"></div>
+  </section>
+</main>
+
+<aside class="detail" id="detail" aria-label="Trophy detail" hidden>
+  <button type="button" class="detail-close" id="detail-close" aria-label="Close detail">×</button>
+  <div id="detail-body"></div>
+</aside>
+
+<footer>
+  <p>Guide text is written for this entry from the official trophy descriptions published by PSNProfiles and Exophase; the game is unreleased, and steps inferred from a description are labelled as inferred. No artwork, logo or screenshot from the game is used; the look of this page is original CSS. Progress is stored only in localStorage in this browser.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
